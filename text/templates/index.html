@@ -18,7 +18,8 @@
     <div style="padding-right:6px;width:738px;">
 
         <table style="width:100%;"><tr><td>
-        <form action="" method="post" accept-charset="utf-8">
+        <form action="/" method="post" accept-charset="utf-8">
+        {% csrf_token %}
         <table style="width:100%;">
         <tr>
         <td> 
@@ -29,7 +30,7 @@
         
         <br/><br/></td></tr>
         <tr><td>
-        <textarea class="LEX_TA_TEXTAREA" name="text_main" rows="25" cols="100"></textarea><br/>
+        <textarea class="LEX_TA_TEXTAREA" name="text_main" rows="25" cols="100" placeholder="{{text}}"></textarea><br/>
         </td></tr>
         <tr><td style="text-align:right;">
         <br/><br/>
@@ -42,12 +43,12 @@
         </td></tr></table>
         <table style="width:100%;">
         <tr><td> 
-
-        <div style="display: none;">
-        <h3 style="margin-top:-50px;"><a id="analysis"></a>Analysis</h3>Sentences: <br>Paragraphs: <br>Words: <br>Characters (including spaces): <br>Characters (excluding spaces): <br><br/>
+        {% if status %}
+        <div class="analyser">
+        <h3 style="margin-top:-50px;"><a id="analysis"></a>Analysis</h3>Sentences: <br>Paragraphs: <br>Words: {{word_count}}<br>Characters (including spaces): <br>Characters (excluding spaces): <br><br/>
         Words per sentence: <br>Characters per word: <br><br/>
         </div>
-
+        {% endif %}
         <div style="margin-bottom:10px;">
         <table class="tnopad" style="margin-left: auto; margin-right: auto;">
         <tr><td><div style="height:6px;width:1px;"></div></td></tr>
