@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text_analyzer</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    
+</head>
+<body style="background-color:rgb(114, 141, 132);">
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#contact">About</a>
+        <a href="#about">Contact</a>
+    </div>
+    <div style="padding-right:6px;width:738px;">
+
+        <table style="width:100%;"><tr><td>
+        <form action="" method="post" accept-charset="utf-8">
+        <table style="width:100%;">
+        <tr>
+        <td> 
+        <br>
+        <p style="font-family: Lucida Console, Courier New, monospace"> Text analysis tool provides information on the complexity of a text, as well as statistics on word frequency and character count. It can
+        be of assistance to translators when calculating quotes for clients.</p>
+        <br/><br/><p style="font-family: Lucida Console, Courier New, monospace">Enter or paste your text to analyze in the box below then click on GO</p>
+        
+        <br/><br/></td></tr>
+        <tr><td>
+        <textarea class="LEX_TA_TEXTAREA" name="text_main" rows="25" cols="100"></textarea><br/>
+        </td></tr>
+        <tr><td style="text-align:right;">
+        <br/><br/>
+        <!--form action=""-->
+        <center><button class="button">GO</button></center>
+        <!--/form-->
+        </td></tr>
+        </table>
+        </form> 
+        </td></tr></table>
+        <table style="width:100%;">
+        <tr><td> 
+
+        <div style="display: none;">
+        <h3 style="margin-top:-50px;"><a id="analysis"></a>Analysis</h3>Sentences: <br>Paragraphs: <br>Words: <br>Characters (including spaces): <br>Characters (excluding spaces): <br><br/>
+        Words per sentence: <br>Characters per word: <br><br/>
+        </div>
+
+        <div style="margin-bottom:10px;">
+        <table class="tnopad" style="margin-left: auto; margin-right: auto;">
+        <tr><td><div style="height:6px;width:1px;"></div></td></tr>
+        <tr><td style="padding:0;text-align:center;">
+</body>
+</html>
