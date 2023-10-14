@@ -18,12 +18,16 @@ def text_analyzer(request):
         print(paragraphcount)
         print(len(paragraphcount))
 
+        sentence = text.split(".")
+        print(len(sentence))
 
         context = {
             'status' : True,
             'word_count' : word_count,
             'text' : text,
-            'para' : len(paragraphcount)
+            'para' : len(paragraphcount),
+            'sentence' : len(sentence)
+
         }
     return render(request,'index.html',context)
 
